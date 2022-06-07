@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('pokemon', function (Blueprint $table) {
+        Schema::create('trainer_entries', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('icon');
-            $table->string('type_one');
-            $table->string('type_two');
+            $table->integer('trainer_id');
+            $table->integer('pokemon_id');
+            $table->boolean('seen');
+            $table->boolean('caught');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pokemon');
+        Schema::dropIfExists('trainer_entries');
     }
 };

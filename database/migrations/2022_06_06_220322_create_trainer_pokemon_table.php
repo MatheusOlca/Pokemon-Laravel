@@ -15,8 +15,10 @@ return new class extends Migration
     {
         Schema::create('trainer_pokemon', function (Blueprint $table) {
             $table->id();
-            $table->integer('trainer');
-            $table->integer('pokemon');
+            $table->integer('trainer_id');
+            $table->integer('pokemon_id');
+            $table->string('nickname');
+            $table->integer('experience');
             $table->timestamps();
         });
     }

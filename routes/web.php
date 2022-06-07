@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\Pokemon;
+use App\Http\Controllers\TrainerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +14,12 @@ use App\Models\Pokemon;
 |
 */
 
-Route::get('/', function () {
-    return view('entries', ['entry' => Pokemon::get()]);
+Route::get('/', function(){
+      echo '<script>document.location = \'trainer/profile\'</script>';
 });
+Route::get('/trainer/profile', [TrainerController::class, 'viewProfile']);
+Route::get('/trainer/pokedex', [TrainerController::class, 'viewReadAllSeen']);
+Route::get('/trainer/caught', [TrainerController::class, 'viewReadAllCaught']);
+Route::get('/trainer/create', [TrainerController::class, 'viewCreate']);
+Route::get('/trainer/edit/{id}', [TrainerController::class, 'viewEdit']);
+Route::get('/trainer/delete/{id}', [TrainerController::class, 'viewDelete']);

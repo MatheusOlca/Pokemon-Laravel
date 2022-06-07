@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('trainers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->decimal('balance');
+            $table->integer('balance');
             $table->timestamps();
         });
     }

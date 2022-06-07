@@ -7,8 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class TrainerPokemon extends Model
 {
+
     use HasFactory;
 
-    protected $fillable = ['trainer', 'pokemon'];
+    protected $fillable = ['trainer_id', 'pokemon_id', 'nickname', 'experience'];
 
 }

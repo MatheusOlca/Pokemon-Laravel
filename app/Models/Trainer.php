@@ -7,8 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Trainer extends Model
 {
+
     use HasFactory;
 
     protected $fillable = ['name', 'balance'];
-
+    
 }

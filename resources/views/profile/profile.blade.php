@@ -16,27 +16,39 @@
                   <div class="card-header">
                         <ul class="nav nav-tabs card-header-tabs">
                               <li class="nav-item">
-                                    <a class="nav-link text-dark" href="/trainer/profile">Profile</a>
+                                    <a class="nav-link text-dark" href="/trainer">X</a>
                               </li>
                               <li class="nav-item">
-                                    <a class="nav-link active text-dark" href="">Pokemon's</a>
+                                    <a class="nav-link active text-dark" href="">Profile</a>
                               </li>
                               <li class="nav-item">
-                                    <a class="nav-link text-dark" href="/trainer/pokedex">Pokedex</a>
+                                    <a class="nav-link text-dark" href="/profile/caught/{{ $id }}">Pokemon's</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a class="nav-link text-dark" href="/profile/pokedex/{{ $id }}">Pokedex</a>
                               </li>
                         </ul>
                   </div>
                   <div class="card-body row">
                         <div class="col col-sm-4">
+                              <img class="card-image img-fluid rounded border" src="https://pbs.twimg.com/profile_images/1117531148081598464/7cxoRQ0E_400x400.jpg" alt="Trainer Image">
                         </div>
                         <div class="col col-sm-8">
                               <ul class="nav nav-tabs">
                                     <li class="nav-item">
-                                          <h4 class="nav-link active">...</h4>
+                                          <h4 class="nav-link active">Profile</h4>
                                     </li>
                               </ul>
                               <div class="border border-top-0 p-3">
-                                    
+                                    <div class="input-group mb-3">
+                                          <span class="input-group-text bg-white">Name: </span>
+                                          <input class="form-control bg-white" type="text" name="trainerName" id="trainerName" readonly value="{{ $trainer->name }}">
+                                    </div>
+                                    <div class="input-group">
+                                          <span class="input-group-text bg-white">Balance: </span>
+                                          <span class="input-group-text bg-white">$</span>
+                                          <input class="form-control bg-white" type="text" name="trainerName" id="trainerName" readonly value="{{ $trainer->balance }}">
+                                    </div>
                               </div>
                         </div>
                   </div>

@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->integer('trainer_id');
             $table->integer('pokemon_id');
-            $table->boolean('seen');
-            $table->boolean('caught');
+            $table->bool('seen');
+            $table->bool('caught');
             $table->timestamps();
         });
     }

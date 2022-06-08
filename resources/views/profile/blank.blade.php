@@ -16,13 +16,16 @@
                   <div class="card-header">
                         <ul class="nav nav-tabs card-header-tabs">
                               <li class="nav-item">
-                                    <a class="nav-link text-dark" href="/trainer/profile">Profile</a>
+                                    <a class="nav-link text-dark" href="/trainer">X</a>
                               </li>
                               <li class="nav-item">
-                                    <a class="nav-link text-dark" href="/trainer/caught">Pokemon's</a>
+                                    <a class="nav-link text-dark" href="/profile/{{ $id }}">Profile</a>
                               </li>
                               <li class="nav-item">
-                                    <a class="nav-link active text-dark" href="">Pokedex</a>
+                                    <a class="nav-link text-dark" href="/profile/caught/{{ $id }}">Pokemon's</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a class="nav-link text-dark" href="/profile/pokedex/{{ $id }}">Pokedex</a>
                               </li>
                         </ul>
                   </div>

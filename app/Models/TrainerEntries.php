@@ -12,4 +12,8 @@ class TrainerEntries extends Model
 
     protected $fillable = ['trainer_id', 'pokemon_id', 'seen', 'caught'];
 
+    public function post(){
+        return $this->hasOne('App/Trainer');
+    }
+
 }
